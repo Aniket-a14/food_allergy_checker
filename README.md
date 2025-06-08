@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AllergyGuard
+
+AllergyGuard is a Next.js web app that helps you scan, search, and check food products for allergens using the [OpenFoodFacts API](https://world.openfoodfacts.org/). Instantly detect allergens by scanning barcodes, uploading images, or using voice input. Your personal allergen profile and scan history are saved locally for a safer eating experience.
+
+## Features
+
+- **Barcode Scanning:** Use your device camera to scan product barcodes (QuaggaJS).
+- **Image Upload:** Upload product images for barcode or text (OCR) extraction (Tesseract.js).
+- **Voice Input:** Search for products by speaking their name (Web Speech API).
+- **Manual Entry:** Enter barcodes manually.
+- **Allergen Profile:** Save your allergens and see them highlighted in product results.
+- **Scan History:** View your last 5 scanned products.
+- **OpenFoodFacts Integration:** Product data and allergen info are fetched live from OpenFoodFacts.
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Scan:** Use the "Live Scan" or "Barcode Scan" button to scan a product.
+- **Upload:** Click "Upload Image" to upload a product photo.
+- **Voice:** Click "Voice Input" and speak the product name.
+- **Allergens:** Set your allergens in the "My Allergens" section.
+- **History:** Your last 5 scans appear in the "Scan History" section.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [QuaggaJS](https://serratus.github.io/quaggaJS/) (barcode scanning)
+- [Tesseract.js](https://tesseract.projectnaptha.com/) (OCR)
+- [OpenFoodFacts API](https://world.openfoodfacts.org/data)
+- [Tailwind CSS](https://tailwindcss.com/) (styling)
+- [Lucide Icons](https://lucide.dev/)
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [OpenFoodFacts API Docs](https://world.openfoodfacts.org/data)
+- [QuaggaJS Docs](https://serratus.github.io/quaggaJS/)
+- [Tesseract.js Docs](https://tesseract.projectnaptha.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is for educational/demo purposes. Product data is provided by OpenFoodFacts.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
